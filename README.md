@@ -2,7 +2,7 @@
 
 Тестовое задание для компании SMIT.Studio
 
-Ссылка: http://2.59.40.103:80100/api/docs/
+Ссылка: http://2.59.40.103:9999/api/docs/
 
 ## Предустановка
 
@@ -54,4 +54,4 @@ $ docker compose -f docker-compose.prod.yml up --build
 **URLS**:
 
 - Локально - http://localhost:8000/api/docs/
-- На демо: http://2.59.40.103:80100/api/docs/
+- На демо: http://2.59.40.103:9999/api/docs/
