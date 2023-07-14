@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    env_file:
+      - .env.dev
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - 8000:8000
+    volumes:
+      - ./app:/src/app
+    env_file:
+      - .env.dev
+    depends_on:
+      - db
+
+volumes:
+  pg_data:
