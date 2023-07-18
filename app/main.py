@@ -8,7 +8,7 @@ from .api.v1.commands import init_insurances
 
 app = FastAPI(
     docs_url='/api/docs/' if settings.mode == 'development' else None,
-    redoc_url='/api/docs/' if settings.mode == 'development' else None,
+    redoc_url='/api/redoc/' if settings.mode == 'development' else None,
     openapi_url='/api/openapi.json' if settings.mode == 'development' else None,
     title='SMIT Test Task',
 )
